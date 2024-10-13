@@ -1,0 +1,103 @@
+$primary-color: #6c5ce7;
+$sidebar-bg: #f4f4f4;
+$hover-bg: darken($sidebar-bg, 10%);
+$text-color: #2d3436;
+$active-color: #dfe6e9;
+
+.sidebar {
+  width: 250px;
+  background-color: $sidebar-bg;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    .navList {
+      list-style: none;
+      padding: 0;
+
+      .navItem {
+        display: flex;
+        align-items: center;
+        color: $text-color;
+        padding: 10px;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $hover-bg;
+        }
+
+        &.active {
+          background-color: $active-color;
+          color: $primary-color;
+        }
+
+        .icon {
+          margin-right: 10px;
+        }
+      }
+
+      .menuItem {
+        cursor: pointer;
+        position: relative;
+
+        span {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        }
+
+        .arrow {
+          transition: transform 0.3s ease;
+        }
+
+        &.open .arrow {
+          transform: rotate(180deg);
+        }
+
+        .subMenu {
+          list-style: none;
+          padding-left: 20px;
+
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomActions {
+    margin-top: auto;
+
+    .actionItem {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      text-decoration: none;
+      color: $text-color;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-bg;
+      }
+
+      .icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}
