@@ -1,0 +1,53 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #ffffff;
+$hover-color: darken($primary-color, 10%);
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+
+  .authSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: $hover-color;
+      transform: translateY(-3px);
+    }
+  }
+
+  .buttonContainer .button + .button {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,128 @@
+$primary-color: #6c5ce7;
+$light-gray: #f4f4f9;
+$text-color: #2d3436;
+$stat-bg: #fff;
+$trend-up: #2ecc71;
+$trend-down: #e74c3c;
+
+.dashboardContainer {
+  padding: 20px;
+  background-color: $light-gray;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $stat-bg;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 1.8rem;
+      color: $primary-color;
+    }
+
+    .headerIcons {
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 1.2rem;
+        margin-right: 20px;
+        cursor: pointer;
+        color: $primary-color;
+      }
+
+      .profileImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .analytics {
+      display: flex;
+      gap: 20px;
+
+      .analyticsCard {
+        background-color: $stat-bg;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex: 2;
+
+        .chart {
+          background-color: #eee;
+          height: 300px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .trendingServices {
+        flex: 1;
+        background-color: $stat-bg;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            span {
+              &.trendUp {
+                color: $trend-up;
+              }
+
+              &.trendDown {
+                color: $trend-down;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .statistics {
+      display: flex;
+      gap: 20px;
+
+      .statCard {
+        flex: 1;
+        background-color: $stat-bg;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        h4 {
+          font-size: 1.2rem;
+          color: $text-color;
+        }
+
+        p {
+          font-size: 2rem;
+          color: $primary-color;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
