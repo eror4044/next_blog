@@ -8,9 +8,10 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Sidebar from "./shared/Sidebar/Sidebar";
 import "../styles/globals.css";
+import { AppProps } from "next/app";
 config.autoAddCss = false;
 
-export default function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [showSidebar, setShowSidebar] = useState(true);
 
