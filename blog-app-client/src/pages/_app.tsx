@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import styles from "./app.module.scss";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Sidebar from "./shared/Sidebar/Sidebar";
+import Sidebar from "../shared/Sidebar/Sidebar";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 config.autoAddCss = false;

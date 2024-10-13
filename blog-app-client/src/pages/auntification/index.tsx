@@ -8,7 +8,7 @@ import {
   SignedIn,
   SignInButton,
 } from "@clerk/nextjs";
-import Loader from "../shared/Loader/Loader";
+import Loader from "../../shared/Loader/Loader";
 import styles from "./Auntification.module.scss";
 
 export default function AuthPage() {
