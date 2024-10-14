@@ -23,7 +23,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       setShowSidebar(true);
     }
   }, [router.pathname]);
-
+  console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    throw new Error('Clerk publishable key is missing');
+  }
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <div className={styles.layoutContainer}>
