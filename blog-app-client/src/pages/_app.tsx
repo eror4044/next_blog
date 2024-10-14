@@ -38,3 +38,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </ClerkProvider>
   );
 }
+export const getServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};
