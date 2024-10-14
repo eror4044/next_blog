@@ -22,7 +22,12 @@ const posts = [
 export default function PostList() {
   return (
     <div className={styles.postsPage}>
-      <h1>Blog Posts</h1>
+      <div className={styles.header}>
+        <h1>Blog Posts</h1>
+        <Link href="/posts/createPost">
+          <button className={styles.createPostButton}>Create Post</button>
+        </Link>
+      </div>
       <ul className={styles.postList}>
         {posts.map((post) => (
           <li key={post.id} className={styles.postItem}>

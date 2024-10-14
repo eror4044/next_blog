@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import router from './routes/posts';
 
 dotenv.config();
 
@@ -11,12 +12,14 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI as string)
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 app.get('/', (req: Request, res: Response) => {
   res.send('API is running...');
 });
+
+app.use('/api/posts', router);
 
 const PORT = process.env.PORT || 5000;
 
