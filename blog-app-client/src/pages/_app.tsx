@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, [router.pathname]);
 
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <div className={styles.layoutContainer}>
         {showSidebar && <Sidebar />}
         <main className={styles.mainContent}>
