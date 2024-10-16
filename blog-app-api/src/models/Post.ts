@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
-
+import { Request } from "express";
 interface IPost extends Document {
   slug: string;
   uuid: string;
@@ -80,9 +80,9 @@ const postSchema: Schema = new Schema({
     default: 0,
   },
 });
-// types/PostRequest.ts
-import { Request } from "express";
+export const Post = mongoose.model<IPost>("Post", postSchema);
 
+// types/PostRequest.ts
 export interface CreatePostRequest extends Request {
   body: {
     title: string;
@@ -112,4 +112,3 @@ export interface DeletePostRequest extends Request {
     id: string;
   };
 }
-export const Post = mongoose.model<IPost>("Post", postSchema);

@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [showSidebar, setShowSidebar] = useState(true);
 
-  useEffect(() => {
+  useEffect(() => {    
     const noSidebarRoutes = ["/auntification"];
     if (noSidebarRoutes.includes(router.pathname)) {
       setShowSidebar(false);
@@ -26,9 +26,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router.pathname]);
   
-  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
-    throw new Error("Clerk publishable key is missing");
-  }
   return (
     <Provider store={store}>
       <ClerkProvider

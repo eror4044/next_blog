@@ -9,7 +9,7 @@ import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 ChartJS.register(BarElement, CategoryScale, LinearScale);
 
 export default function Dashboard() {
-
+//toDo create logic for analytics 
   const data = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
