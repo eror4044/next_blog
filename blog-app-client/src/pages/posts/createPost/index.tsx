@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./CreatePost.module.scss";
-import { CreatePostData, Post } from "@/models/Post";
+import { CreatePostData } from "@/models/Post";
 import { useAppDispatch } from "@/redux/store";
 import { createPost } from "@/redux/actions";
 import ReactMarkdown from "react-markdown";
