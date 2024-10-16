@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./PostsPage.module.scss";
 import { Post } from "@/models/Post";
+import Image from "next/image";
 
 const posts = [
   {
@@ -29,7 +30,8 @@ const posts = [
     _id: "5f5f1cfc33b1e72b1c8e2f1e",
     slug: "css-modules-nextjs",
     title: "Using CSS Modules in Next.js",
-    html: "<p>Learn how to effectively use CSS Modules in your Next.js projects.</p>",
+    html:
+      "<p>Learn how to effectively use CSS Modules in your Next.js projects.</p>",
     feature_image: "https://example.com/css-modules.jpg",
     visibility: "public",
     createdAt: new Date("2021-03-10T10:00:00.000Z"),
@@ -40,7 +42,8 @@ const posts = [
     _id: "5f5f1cfc33b1e72b1c8e2f1f",
     slug: "optimizing-nextjs-performance",
     title: "Optimizing Performance in Next.js",
-    html: "<p>Discover tips and techniques for optimizing your Next.js app's performance.</p>",
+    html:
+      "<p>Discover tips and techniques for optimizing your Next.js app's performance.</p>",
     feature_image: "https://example.com/nextjs-performance.jpg",
     visibility: "public",
     createdAt: new Date("2021-04-05T10:00:00.000Z"),
@@ -48,7 +51,6 @@ const posts = [
     publishedAt: new Date("2021-04-06T12:00:00.000Z"),
   },
 ] as Post[];
-
 
 export default function PostList() {
   return (
@@ -64,7 +66,7 @@ export default function PostList() {
           {posts.map((post) => (
             <li key={post._id} className={styles.postItem}>
               <Link href={`/posts/${post._id}`}>
-                <img
+                <Image
                   src={post.feature_image}
                   alt={post._id}
                   className={styles.postImage}

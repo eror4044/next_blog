@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./CreatePost.module.scss";
-import { CreatePostData, Post } from "@/models/Post";
+import { CreatePostData } from "@/models/Post";
 import { useAppDispatch } from "@/redux/store";
 import { createPost } from "@/redux/actions";
 import ReactMarkdown from "react-markdown";
@@ -72,7 +72,7 @@ export default function CreatePost() {
                 {mainImage ? (
                   <p>{mainImage.name}</p>
                 ) : (
-                  <p>Drag 'n' drop the main image, or click to select one</p>
+                  <p>Drop the main image, or click to select one</p>
                 )}
               </div>
             )}
