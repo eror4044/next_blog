@@ -1,4 +1,4 @@
-import { CreatePostData, CreatePostDataDTO, UpdatePostData } from '@/models/Post';
+import { CreatePostData, CreatePostDataDTO } from '@/models/Post';
 import { uploadImageToCloudinary } from '@/utils/cloudinary';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';

@@ -72,7 +72,7 @@ export default function CreatePost() {
                 {mainImage ? (
                   <p>{mainImage.name}</p>
                 ) : (
-                  <p>Drag 'n' drop the main image, or click to select one</p>
+                  <p>Drop the main image, or click to select one</p>
                 )}
               </div>
             )}

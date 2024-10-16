@@ -1,6 +1,5 @@
 import Loader from "@/shared/Loader/Loader";
-import router from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@clerk/nextjs";
