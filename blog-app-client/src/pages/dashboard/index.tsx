@@ -2,14 +2,14 @@
 
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from 'chart.js';
-import styles from './Dashboard.module.scss';
+import styles from './dashboard.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale);
 
 export default function Dashboard() {
-
+//toDo create logic for analytics 
   const data = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
@@ -72,3 +72,8 @@ export default function Dashboard() {
     </div>
   );
 }
+export const getServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};
